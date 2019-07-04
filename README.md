@@ -1,2 +1,1 @@
 # recycle
-recycle

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: recycing
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.99.100.41/ares
+    username: root
+    password: 123456
+
+
+server:
+  port: 8080
+
+
+
+logging:
+  level:
+    com:
+      ares:
+        recyce:
+          mapper: debug
