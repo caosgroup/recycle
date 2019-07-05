@@ -16,8 +16,14 @@
 
         <dependency>
             <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-service</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
             <artifactId>recyce-dao</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${parent.version}</version>
         </dependency>
 
         <!-- apollo -->

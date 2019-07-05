@@ -1,11 +1,11 @@
 spring:
   application:
     name: recycing
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.99.100.41/ares
-    username: root
-    password: 123456
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://47.99.100.41/ares
+#    username: root
+#    password: 123456
 
 
 server:
@@ -20,19 +20,30 @@ logging:
         recyce:
           mapper: debug
 --- # eureka
-eureka:
-  instance:
-    homePageUrl: http://47.99.100.41:8080
-    preferIpAddress: false
+#eureka:
+#  instance:
+#    homePageUrl: http://47.99.100.41:8080
+#    preferIpAddress: false
 
 
 --- # apollo 相关配置
+# -Dapollo.cluster=HangZhou
+# -Dapollo.configService=http://47.99.100.41:8080
 app:
   id: Ares
 apollo:
-  meta: http://localhost:8080
+  # meta: http://47.99.100.41:8080
+  # configService: http://47.99.100.41:8080
+  cluster: HangZhou
   bootstrap:
     enabled: true
     namespaces: application
     eagerLoad:
       enabled: true
+
+spring:
+  datasource:
+    url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver

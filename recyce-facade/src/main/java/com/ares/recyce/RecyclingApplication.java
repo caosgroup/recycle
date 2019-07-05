@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan(basePackages = {"com.ares.recyce.mapper"})
-@SpringBootApplication
+@ComponentScan(basePackages = {"com.ares.recyce.*"})
+@SpringBootApplication(scanBasePackages = {"com.ares.recyce"})
 public class RecyclingApplication {
 
 	public static void main(String[] args) {
