@@ -8,6 +8,7 @@
 		<module>recyce-common</module>
 		<module>recyce-service</module>
 		<module>recyce-surface</module>
+		<module>recyce-api</module>
 	</modules>
 
 	<parent>

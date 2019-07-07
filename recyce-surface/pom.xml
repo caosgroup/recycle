@@ -11,5 +11,12 @@
 
     <artifactId>recyce-surface</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
