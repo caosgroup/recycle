@@ -1,6 +1,6 @@
-import com.ares.recyce.RecyclingApplication;
-import com.ares.recyce.mapper.UserMapper;
-import com.ares.recyce.po.User;
+import com.ares.recycle.RecyclingApplication;
+import com.ares.recycle.mapper.UserMapper;
+import com.ares.recycle.po.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

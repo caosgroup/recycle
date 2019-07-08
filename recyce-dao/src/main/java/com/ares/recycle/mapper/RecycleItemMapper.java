@@ -1,6 +1,6 @@
-package com.ares.recyce.mapper;
+package com.ares.recycle.mapper;
 
-import com.ares.recyce.po.RecycleItemPO;
+import com.ares.recycle.po.RecycleItemPO;
 
 public interface RecycleItemMapper {
     int insert(RecycleItemPO record);

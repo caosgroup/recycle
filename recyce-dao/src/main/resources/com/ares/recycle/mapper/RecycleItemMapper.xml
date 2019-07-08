@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ares.recyce.mapper.RecycleItemMapper">
-  <resultMap id="BaseResultMap" type="com.ares.recyce.po.RecycleItemPO">
+<mapper namespace="com.ares.recycle.mapper.RecycleItemMapper">
+  <resultMap id="BaseResultMap" type="com.ares.recycle.po.RecycleItemPO">
     <result column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="type" jdbcType="INTEGER" property="type" />
@@ -10,7 +10,7 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
   </resultMap>
-  <insert id="insert" parameterType="com.ares.recyce.po.RecycleItemPO">
+  <insert id="insert" parameterType="com.ares.recycle.po.RecycleItemPO">
     insert into recycle_item (id, name, type, 
       create_time, create_by, update_time, 
       update_by)
@@ -18,7 +18,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{updateBy,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.ares.recyce.po.RecycleItemPO">
+  <insert id="insertSelective" parameterType="com.ares.recycle.po.RecycleItemPO">
     insert into recycle_item
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

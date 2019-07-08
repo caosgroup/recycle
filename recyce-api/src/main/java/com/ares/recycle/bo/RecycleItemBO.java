@@ -1,4 +1,4 @@
-package com.ares.recyce.bo;
+package com.ares.recycle.bo;
 
 import lombok.Data;
 

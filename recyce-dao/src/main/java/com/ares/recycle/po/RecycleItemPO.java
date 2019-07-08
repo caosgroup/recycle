@@ -1,4 +1,4 @@
-package com.ares.recyce.po;
+package com.ares.recycle.po;
 
 import java.util.Date;
 

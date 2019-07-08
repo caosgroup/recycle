@@ -1,4 +1,4 @@
-package com.ares.recyce.commcon.exception;
+package com.ares.recycle.commcon.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

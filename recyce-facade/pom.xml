@@ -16,6 +16,12 @@
 
         <dependency>
             <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-surface</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
             <artifactId>recyce-service</artifactId>
             <version>${parent.version}</version>
         </dependency>
@@ -30,6 +36,17 @@
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
+        </dependency>
+
+        <!--  -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
 
 
