@@ -78,7 +78,7 @@
 
     <sql id="baseWhere">
         <if test="request.name != null and request.name != ''">
-            and name = #{request.name}
+            and name like #{request.name}
         </if>
         <if test="request.type != null and request.type != 0">
             and type = #{request.type}
