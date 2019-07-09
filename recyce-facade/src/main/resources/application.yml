@@ -17,7 +17,7 @@ logging:
   level:
     com:
       ares:
-        recyce:
+        recycle:
           mapper: debug
 --- # eureka
 #eureka:
