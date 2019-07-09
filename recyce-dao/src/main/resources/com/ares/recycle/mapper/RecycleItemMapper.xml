@@ -72,15 +72,15 @@
         <include refid="baseResult"/>
         from recycle_item
         <where>
-            <include refid="baseResult"/>
+            <include refid="baseWhere"/>
         </where>
     </select>
 
     <sql id="baseWhere">
-        <if test="request.name != null">
+        <if test="request.name != null and request.name != ''">
             and name = #{request.name}
         </if>
-        <if test="request.type != null">
+        <if test="request.type != null and request.type != 0">
             and type = #{request.type}
         </if>
     </sql>
