@@ -1,4 +1,4 @@
-package com.ares.recycle.commcon.util;
+package com.ares.recyce.common.util;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;

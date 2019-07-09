@@ -11,6 +11,13 @@
 
     <artifactId>recyce-dao</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

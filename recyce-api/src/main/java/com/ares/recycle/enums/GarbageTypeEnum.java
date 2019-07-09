@@ -17,6 +17,22 @@ public enum GarbageTypeEnum {
     OTHER(99, "其他"),
     ;
 
+    /**
+     * 根据类型获取枚举信息
+     *
+     * @param type 类型
+     * @return 枚举
+     */
+    public static GarbageTypeEnum getEnumByType(Integer type) {
+        for (GarbageTypeEnum garbageTypeEnum : values()) {
+            if (garbageTypeEnum.getType().equals(type)) {
+                return garbageTypeEnum;
+            }
+        }
+
+        return null;
+    }
+
     private Integer type;
 
     private String alias;

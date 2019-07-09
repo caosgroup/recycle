@@ -12,4 +12,24 @@
     <artifactId>recyce-service</artifactId>
 
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ares.recycling</groupId>
+            <artifactId>recyce-dao</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
