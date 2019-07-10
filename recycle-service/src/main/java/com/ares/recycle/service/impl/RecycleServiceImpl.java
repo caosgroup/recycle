@@ -6,9 +6,9 @@ import com.ares.recycle.mapper.RecycleItemMapper;
 import com.ares.recycle.po.RecycleItemPO;
 import com.ares.recycle.request.RecycleItemRequest;
 import com.ares.recycle.service.RecycleService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.List;
 

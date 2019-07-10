@@ -1,11 +1,10 @@
 package com.ares.recycle.request;
 
 import com.ares.recycle.enums.GarbageTypeEnum;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 

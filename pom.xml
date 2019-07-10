@@ -29,6 +29,7 @@
 		<java.version>1.8</java.version>
 
         <swagger.version>2.9.2</swagger.version>
+        <commons-long3.version>3.8.1</commons-long3.version>
 	</properties>
 
 	<dependencies>
@@ -117,6 +118,14 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
+
+            <!-- commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-long3.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

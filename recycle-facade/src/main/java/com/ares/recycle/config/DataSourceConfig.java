@@ -5,6 +5,7 @@ import com.ctrip.framework.apollo.model.ConfigChangeEvent;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
 import com.zaxxer.hikari.HikariDataSource;
+import com.zaxxer.hikari.HikariPoolMXBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -13,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
+import org.springframework.scheduling.annotation.Async;
 
 import javax.sql.DataSource;
 import java.util.Collections;
@@ -32,7 +34,22 @@ public class DataSourceConfig {
     /**
      * Db变更的key
      */
-    public static final String DATASOURCE_KEY = "datasource";
+    private static final String DATASOURCE_KEY = "datasource";
+
+    /**
+     * 切换数据源最大重试次数
+     */
+    private static final int MAX_RETRY_TIMES = 3;
+
+    /**
+     * 重试间隔时间 ms
+     */
+    private static final int RETRY_DELAY_IN_MILLISECONDS = 5000;
+
+    /**
+     *
+     */
+    private volatile int retryTimes = 0;
 
     private final ApplicationContext context;
 
@@ -70,6 +87,28 @@ public class DataSourceConfig {
         dataSource.setPassword(config.getProperty("datasource.password", ""));
         return dataSource;
     }
+
+//    boolean terminateHikariDataSource(HikariDataSource dataSource) {
+//        HikariPoolMXBean poolMXBean = dataSource.getHikariPoolMXBean();
+//
+//        //evict idle connections
+//        poolMXBean.softEvictConnections();
+//
+//        if (poolMXBean.getActiveConnections() > 0 && retryTimes < MAX_RETRY_TIMES) {
+//            log.warn("Data source {} still has {} active connections, will retry in {} ms.", dataSource,
+//                    poolMXBean.getActiveConnections(), RETRY_DELAY_IN_MILLISECONDS);
+//            return false;
+//        }
+//
+//        if (poolMXBean.getActiveConnections() > 0) {
+//            log.warn("Retry times({}) >= {}, force closing data source {}, with {} active connections!", retryTimes,
+//                    MAX_RETRY_TIMES, dataSource, poolMXBean.getActiveConnections());
+//        }
+//
+//        dataSource.close();
+//
+//        return true;
+//    }
 
 
     class DynamicDataSource extends AbstractRoutingDataSource {
