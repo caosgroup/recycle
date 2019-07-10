@@ -32,7 +32,7 @@ public class RecycleController {
     }
 
     @ApiOperation(value = "查询可回收垃圾信息", notes = "查询可回收垃圾信息")
-    @PostMapping(name = "/list")
+    @PostMapping(value = "/list")
     public List<RecycleItemBO> list(@RequestBody RecycleItemRequest request) {
         if (request == null) {
             return Collections.emptyList();
