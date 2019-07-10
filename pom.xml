@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<modules>
-		<module>recyce-facade</module>
-		<module>recyce-dao</module>
-		<module>recyce-common</module>
-		<module>recyce-service</module>
-		<module>recyce-surface</module>
-		<module>recyce-api</module>
+		<module>recycle-facade</module>
+		<module>recycle-dao</module>
+		<module>recycle-common</module>
+		<module>recycle-service</module>
+		<module>recycle-surface</module>
+		<module>recycle-api</module>
 	</modules>
 
 	<parent>
@@ -19,7 +19,7 @@
 	</parent>
 
 	<groupId>com.ares.recycling</groupId>
-	<artifactId>recyce-parent</artifactId>
+	<artifactId>recycle-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>recycling</name>
@@ -86,13 +86,13 @@
             <!-- 一方 -->
             <!--<dependency>-->
             <!--<groupId>com.ares.recycling</groupId>-->
-            <!--<artifactId>recyce-dao</artifactId>-->
+            <!--<artifactId>recycle-dao</artifactId>-->
             <!--<version>${version}</version>-->
             <!--</dependency>-->
 
             <dependency>
                 <groupId>com.ares.recycling</groupId>
-                <artifactId>recyce-facade</artifactId>
+                <artifactId>recycle-facade</artifactId>
                 <version>${version}</version>
             </dependency>
 

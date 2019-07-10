@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: recycing
+
+
+server:
+  port: 7001
+
+
+
+logging:
+  level:
+    com:
+      ares:
+        recycle:
+          mapper: debug
+
+
+--- # apollo 相关配置
+app:
+  id: Ares
+apollo:
+  cluster: HangZhou
+  bootstrap:
+    enabled: true
+    namespaces: application
+    eagerLoad:
+      enabled: true
+
+spring:
+  datasource:
+    url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
