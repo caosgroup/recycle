@@ -19,8 +19,12 @@ import java.util.List;
 @Service
 public class RecycleServiceImpl implements RecycleService {
 
+    private final RecycleItemMapper recycleItemMapper;
+
     @Autowired
-    private RecycleItemMapper recycleItemMapper;
+    public RecycleServiceImpl(RecycleItemMapper recycleItemMapper) {
+        this.recycleItemMapper = recycleItemMapper;
+    }
 
     @Override
     public List<RecycleItemBO> list(RecycleItemRequest request) {

@@ -11,5 +11,11 @@ import java.util.List;
  **/
 public interface RecycleService {
 
+    /**
+     * 条件查询可回收垃圾信息
+     *
+     * @param request 请求request
+     * @return boList
+     */
     List<RecycleItemBO> list(RecycleItemRequest request);
 }
