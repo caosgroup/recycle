@@ -30,7 +30,11 @@
 
         <swagger.version>2.9.2</swagger.version>
         <commons-long3.version>3.8.1</commons-long3.version>
-	</properties>
+        <apache.poi.version>3.17</apache.poi.version>
+        <guava.version>27.0.1-jre</guava.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <javax.mail.version>1.5.6</javax.mail.version>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -74,12 +78,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-
-
-
-
-
 	</dependencies>
 
     <dependencyManagement>
@@ -119,12 +117,50 @@
                 <version>${swagger.version}</version>
             </dependency>
 
+            <!-- javax -->
+            <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+            <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+            <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>javax.mail-api</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+
+
+
+
+            <!-- alibaba -->
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- google -->
+            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- apache -->
             <!-- commons-lang3 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-long3.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${apache.poi.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
